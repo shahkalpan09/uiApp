@@ -1,0 +1,19 @@
+ID: uiApp
+_schema-version: '2.0'
+description: Demo App
+version: 0.0.1
+modules:
+  - name: ui
+    type: html5
+    path: ui
+    requires:
+    - name: mongodb
+    parameters:
+      disk-quota: 500M
+      memory: 500M
+    build-parameters:
+      builder: grunt
+    
+resources:
+- name: mongodb
+  type: mongodb
